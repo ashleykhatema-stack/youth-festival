@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue sample</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body class="bg-[url(https://i.pinimg.com/1200x/22/c7/61/22c761c65eb0f9f13326b26a86651a1c.jpg)] bg-cover bg-center ">
+    <div id="app">
+
+        <!-- HOME desktop-->
+        <div class="hidden sm:hidden md:hidden lg:block">
+            <nav>
+                <div>
+                    <div
+                        class="flex justify-between items-center backdrop-blur-sm bg-[#691FD7]/23 px-10 py-2 fixed z-5 left-0 top-0 w-full h-fit space-x-15 spacey-y-10 ">
+                        <div class=" flex gap-2 items-center italic">
+                            <img class="h-[102.67px] w-[102.67px] rounded-full"
+                                src="https://i.pinimg.com/736x/be/1c/1e/be1c1e22f444da47c314c170b4a7a3f0.jpg" alt="">
+                            <p class="text-[40px] text-gray-50 font-bold">OFFICE OF STUDENT AFFAIRS CULTURAL ASSOCIATION
+                                2026-2027</p>
+                        </div>
+
+
+                        <div class="flex justify-between space-x-16">
+                            <button @click="homeSec" class="text-white font-bold text-[20px]">HOME</button>
+                            <button @click="aboutbtn" class="text-white font-bold text-[20px]">FINE ARTS
+                            </button>
+                            <button @click="itemProduct" class="text-white font-bold text-[20px]">PERFORMIG ARTS
+                            </button>
+                            <button @click="contactbtn" class="text-white font-bold text-[20px]">LETIRARY ARTS
+                            </button>
+                        </div>
+                    </div>
+            </nav>
+
+            <div v-if="HeroSec" class="px-6">
+                <div class="flex flex-col justify-center items-center mt-40 mt-25 mb-25  ">
+                    <p class="text-[80px] italic font-bold"> Y O U T H F E S T I V A L 2 0 2 6-2027 </p>
+                    <p class="text-[48px] italic font-semibold">"Unleashing Potential, Celebrating Excellence"</p>
+                </div>
+                <div class="flex justify-center items-center flex-col gap-5 mb-22 ">
+                    <div class="flex gap-20">
+                        <p class="text-[35px]  italic font-bold "> [ AUGUST 5 - 10, 2026 ] </p>
+                        <p class="text-[35px]  italic font-bold ">[ REGISTRATION DEADLINE ]</p>
+                    </div>
+                    <div class="flex gap-20 ">
+                        <p class="text-[30px]  italic font-semibold"> MAIN CAMPUS AUDITORIUM </p>
+                        <p class="text-[30px]  italic font-semibold"> JULY 15, 2026</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- FINE ARTS desktop-->
+
+
+            <div v-if="about" class=" flex items-center justify-center mt-26 mb-4 flex-col w-full">
+                <div class="flex w-full flex-col">
+
+                    <div class=" p-10 w-full flex justify-center gap-10">
+
+                        <div class="flex text-lg font-semibold gap-10 ">
+
+                            <div class="">
+                                <p class="text-[80px] font-bold"> Y O U T H F E S T I V A L 2 0 2 6-2027
+                                </p> <br>
+                                <div>
+                                    <div>
+
+                                        <p class="text-[48px]">
+                                            Poster Making Competition</p>
+                                        <p class="text-[32px] mb-25">
+                                            Participation: Each participating College, Institute, or Academic Department
+                                            may
+                                            send only 1 student participant.
+                                            Format: The competition is conducted "On the Spot". The specific theme or
+                                            subject is
+                                            revealed by the panel of judges at the time of the event.
+                                            Paper / Canvas Size: Half Imperial size mount board paper (22 inches in
+                                            length ×
+                                            15
+                                            inches in breadth), provided on-site by the university.
+                                            Permitted Mediums: Watercolors, poster colors, or pastel colors.
+                                            Materials: Participants must bring their own brushes, paints, palettes, and
+                                            other
+                                            drawing materials.
+                                            Time Duration: Exactly 2 hours  and 30 minutes.
+
+                                        <p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[48px]">
+                                            Evaluation Criteria </p>
+                                        <p class="text-[32px] mb-25">
+                                            Judges assess entries based on the following key aspects:
+                                            Visualization & Concept: Originality and creative interpretation of the
+                                            given
+                                            topic.
+                                            Delivery of the Subject: Clear visual communication of the theme.
+                                            Presentation & Composition: Layout, balance, line work, and visual
+                                            arrangement.
+                                            Tagline & Impact: Effectiveness of the slogan/tagline and overall aesthetic
+                                            power.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" p-10 w-full flex justify-center gap-10">
+                        <div class="flex text-lg font-semibold gap-10 ">
+
+                            <div class="">
+                                <p class="text-[80px] font-bold"> Y O U T H F E S T I V A L 2 0 2 6-2027
+                                </p> <br>
+                                <div>
+                                    <div>
+
+                                        <p class="text-[48px]">
+                                            On the Spot Painting </p>
+                                        <p class="text-[32px] mb-25">
+                                            Participation: Each participating College, Institute, or Academic Department
+                                            may send only 1 student participant.
+                                            Format: Conducted "On the Spot". The topic/subject is assigned by the panel
+                                            of judges right at the start of the competition.
+                                            Paper / Canvas Size: Half Imperial size drawing paper (22 inches in length ×
+                                            15 inches in breadth), provided on-site by the university.
+                                            Permitted Mediums: Watercolors, poster colors, or pastel colors.
+                                            Materials: Participants must bring their own painting supplies (brushes,
+                                            paints, palettes, water containers, etc.).
+                                            Time Duration: Maximum of 2 hours and 30 minutes.
+
+
+                                        <p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[48px]">
+                                            Evaluation Criteria </p>
+                                        <p class="text-[32px] mb-25">
+                                            Judges evaluate the artwork based on six key criteria:
+                                            Visualization: Creative interpretation of the theme.
+                                            Delivery of the Subject: Clarity in conveying the assigned message/topc.
+                                            Composition: Structural balance and visual arrangement.
+                                            Color Application: Blending, contrast, tone, and technique.
+                                            Presentation: Neatness and artistic execution.
+                                            Overall Impact: Final visual appeal and artistic strength.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" p-10 w-full flex justify-center gap-10">
+                        <div class="flex text-lg font-semibold gap-10 ">
+
+                            <div class="">
+                                <p class="text-[80px] font-bold"> Y O U T H F E S T I V A L 2 0 2 6-2027
+                                </p> <br>
+                                <div>
+                                    <div>
+
+                                        <p class="text-[48px]">
+                                            Collage Making </p>
+                                        <p class="text-[32px] mb-25">
+                                            Participation: Each participating College, Institute, or Academic Department
+                                            may send only 1 student participant.
+                                            Format: Conducted "On the Spot". The specific subject or theme is given by
+                                            the panel of judges at the start of the competition.
+                                            Paper / Canvas Size: Half Imperial size mount board paper (22 inches in
+                                            length × 15 inches in breadth), provided on-site
+                                            by the university.
+                                            Materials Provided: Old magazines for cutting and tearing artwork elements
+                                            are provided on-site by the university.
+                                            Participant Materials: Participants must bring their own pasting materials
+                                            (glue, adhesive), scissors, cutters, and other required tools.
+                                            Time Duration: Maximum of 2 hours and 30 minutes.
+
+                                        <p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[48px]">
+                                            Evaluation Criteria </p>
+                                        <p class="text-[32px] mb-25">
+                                            Judges evaluate entries based on six key criteria:
+                                            Visualization: Creative layout and thematic concept.
+                                            Delivery of the Subject: Clear visual communication of the assigned theme.
+                                            Composition: Arrangement, scale, and balance of cutouts.
+                                            Color Application: Color harmony and contrast across magazine pieces.
+                                            Presentation: Precision in cutting, pasting, and overall neatness.
+                                            Overall Impact: Artistic expression and visual appeal.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" p-10 w-full flex justify-center gap-10">
+                        <div class="flex text-lg font-semibold gap-10 ">
+
+                            <div class="">
+                                <p class="text-[80px] font-bold"> Y O U T H F E S T I V A L 2 0 2 6-2027
+                                </p> <br>
+                                <div>
+                                    <div>
+
+                                        <p class="text-[48px]">
+                                            Clay Modelling </p>
+                                        <p class="text-[32px] mb-25">
+                                            Participation: Each participating College, Institute, or Academic Department
+                                            may send only 1 student participant.
+                                            Format: Conducted "On the Spot". The specific theme or topic is assigned by
+                                            the panel of judges at the beginning of the competition.
+                                            Materials: Clay is provided on-site by the university. Participants must
+                                            bring their own modelling tools, boards, or finishing instruments.
+                                            Time Duration: Maximum of 2 hours and 30 minutes.
+
+
+                                        <p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[48px]">
+                                            Evaluation Criteria </p>
+                                        <p class="text-[32px] mb-25">
+                                            Judges evaluate the clay sculptures based on the following key criteria:
+                                            Visualization: Creative interpretation and originality of the given concept.
+                                            Delivery of the Subject: Clarity in executing and conveying the assigned
+                                            theme.
+                                            Composition & Proportions: Structural balance, form, and scale of the model.
+                                            Handling of Medium: Technique, texture, craftsmanship, and neatness.
+                                            Presentation & Overall Impact: Final aesthetic value and artistic
+                                            impression.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- PERFORMING ARTS desktop -->
+
+
+
+            <div v-if="ProductParent" class=" flex items-center justify-center mt-26 mb-4 flex-col w-full">
+                <div class="flex w-full flex-col">
+
+                    <div class=" p-10 w-full flex justify-center gap-10">
+
+                        <div class="flex text-lg font-semibold gap-10 ">
+
+                            <div class="">
+                                <p class="text-[80px] font-bold"> Y O U T H F E S T I V A L 2 0 2 6-2027
+                                </p> <br>
+                                <div>
+                                    <div>
+
+                                        <p class="text-[48px]">
+                                            Music (Musika)</p>
+                                        <p class="text-[32px] mb-25">
+                                            Duration: 3 to 7 minutes per entry (varies between solo and
+                                            ensemble events).
+                                            Instrumentation:
+                                            Indigenous/Folk: Must strictly use authentic instruments (e.g., Kulintang,
+                                            Gangsa, bamboo percussion) without electronic amplification or synthesized
+                                            backing tracks.
+                                            Classical/Traditional: Acoustic instruments only (e.g., classical guitar for
+                                            Harana, standard 14-string set for Rondalla ensembles).
+                                            Repertoire: Songs or compositions must align with the specified genre (e.g.,
+                                            Kundiman songs must be traditional Tagalog/Visayan art songs, not modern OPM
+                                            pop ballads).
+                                            Costume: Attire must reflect the region or historical era associated with
+                                            the piece (e.g., Barong Tagalog / Baro’t Saya for Rondalla and Kundiman).
+
+
+
+                                        <p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[48px]">
+                                            Evaluation Criteria </p>
+                                        <p class="text-[32px] mb-25">
+                                            Vocal / Instrumental Technique (30%): Intonation, pitch accuracy, tone
+                                            quality, breath control, and articulation.
+                                            Musicality & Expression (25%): Dynamics, tempo interpretation, phrasing, and
+                                            emotional delivery.
+                                            Mastery & Precision (20%): Rhythmic accuracy, synchronization (for ensembles
+                                            like Rondalla), and memorization.
+                                            Authenticity & Style (15%): Adherence to traditional genre nuances and
+                                            regional style.
+                                            Stage Presence & Overall Impact (10%): Poise, confidence, costume
+                                            appropriateness, and audience engagement
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" p-10 w-full flex justify-center gap-10">
+                        <div class="flex text-lg font-semibold gap-10 ">
+
+                            <div class="">
+                                <p class="text-[80px] font-bold"> Y O U T H F E S T I V A L 2 0 2 6-2027
+                                </p> <br>
+                                <div>
+                                    <div>
+
+                                        <p class="text-[48px]">
+                                            Dance (Sayaw) </p>
+                                        <p class="text-[32px] mb-25">
+                                            Duration: 4 to 8 minutes per routine.
+                                            Prop & Stage Setup:
+                                            Folk/Ritual: Props (e.g., bamboo poles for Tinikling, fans/scarves for
+                                            Singkil) must be authentic to the dance's cultural origin. Setup time is
+                                            often capped at 1 to 2 minutes.
+                                            Festival Street Dance: Allowed modular mobile props, provided they fit
+                                            within stage dimensions.
+                                            Music: Audio tracks must be high-quality pre-recorded tracks or live
+                                            traditional musical accompaniments (e.g., live gongs or drums).
+                                            Attire: Authentic ethnolinguistic attire or festival costumes corresponding
+                                            accurately to the dance presented.
+
+
+                                        <p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[48px]">
+                                            Evaluation Criteria </p>
+                                        <p class="text-[32px] mb-25">
+                                            Choreography & Composition (30%): Creativity, floor patterns, formation
+                                            transitions, and thematic structure.
+                                            Execution & Technique (25%): Coordination, precision, rhythm, body
+                                            alignment, and footwork mastery.
+                                            Cultural Authenticity / Concept Fidelity (20%): Accurate movement styles,
+                                            proper use of traditional props, and authentic attire.
+                                            Performance & Expression (15%): Energy, facial expressions, showmanship, and
+                                            unison.
+                                            Costume & Overall Visual Impact (10%): Visual appeal, color harmony, and
+                                            stage projection.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" p-10 w-full flex justify-center gap-10">
+                        <div class="flex text-lg font-semibold gap-10 ">
+
+                            <div class="">
+                                <p class="text-[80px] font-bold"> Y O U T H F E S T I V A L 2 0 2 6-2027
+                                </p> <br>
+                                <div>
+                                    <div>
+
+                                        <p class="text-[48px]">
+                                            Theater & Stage (Dula) </p>
+                                        <p class="text-[32px] mb-25">
+                                            Duration: Ranging from 10 to 15 minutes (for short plays/monologues) up to
+                                            30 to 45 minutes (for full one-act plays or Sarsuwela excerpts). Time
+                                            penalties apply for under/overtime.
+                                            Cast & Crew: Strict limits on the maximum number of actors on stage and
+                                            technical crew offstage.
+                                            Stagecraft & Minimalist Sets: Props and set pieces must be quick to install
+                                            and strip down (usually within a 3-minute limit).
+                                            Content: Scripts must be original or appropriately adapted, adhering to
+                                            ethical standards without vulgarity or uncredited plagiarism.
+
+                                        <p>
+                                    </div>
+                                    <div>
+                                        <p class="text-[48px]">
+                                            Evaluation Criteria </p>
+                                        <p class="text-[32px] mb-25">
+                                            Acting & Characterization (35%): Voice projection, diction, emotional
+                                            conviction, character depth, and actor chemistry.
+                                            Direction & Staging (25%): Blocking, pacing, use of stage space, and overall
+                                            dramatic flow.
+                                            Script & Narrative Structure (20%): Story clarity, thematic strength,
+                                            dialogue quality, and message effectiveness.
+                                            Technical & Production Values (10%): Effective integration of sound design,
+                                            lighting, costumes, and props.
+                                            Overall Dramatic Impact (10%): Total impression, emotional resonance, and
+                                            audience connection.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- LITERARY ARTS desktop-->
+
+        <div v-if="proProductParent" class=" flex items-center justify-center mt-26 mb-4 flex-col w-full">
+            <div class="flex w-full flex-col">
+
+                <div class=" p-10 w-full flex justify-center gap-10">
+
+                    <div class="flex text-lg font-semibold gap-10 ">
+
+                        <div class="">
+                            <p class="text-[80px] font-bold"> Y O U T H F E S T I V A L 2 0 2 6-2027
+                            </p> <br>
+                            <div>
+                                <div>
+
+                                    <p class="text-[48px]">
+                                        Elocution (Solo Event)</p>
+                                    <p class="text-[32px] mb-25">
+                                        Participation: 1 participant per department/college.
+                                        Languages Allowed: English, Filipino, or regional languages (e.g.,
+                                        Cebuano/Davao-Binisaya) as designated by the organizers.
+                                        Topic Selection: Topics are typically announced 24 hours in advance or assigned
+                                        via
+                                        a draw at the venue.
+                                        Time Limit: 4 to 5 minutes. A warning bell sounds at 4 minutes, and a final bell
+                                        rings at 5 minutes. Points are deducted for under-time or over-time.
+                                        Format: Delivery must be memorized and delivered orally without reading from
+                                        notes
+                                        or prompts
+                                    <p>
+                                </div>
+                                <div>
+                                    <p class="text-[48px]">
+                                        Evaluation Criteria </p>
+                                    <p class="text-[32px] mb-25">
+                                        Content & Substance (30%): Clarity of thought, logical structure, depth of
+                                        argument,
+                                        and relevant examples.
+                                        Oratory & Delivery (30%): Voice modulation, pitch, articulation, pronunciation,
+                                        and
+                                        pacing.
+                                        Language & Diction (20%): Vocabulary choice, grammatical accuracy, and
+                                        eloquence.
+                                        Stage Presence & Impact (20%): Confidence, posture, eye contact, non-verbal
+                                        expression, and audience connection.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" p-10 w-full flex justify-center gap-10">
+                    <div class="flex text-lg font-semibold gap-10 ">
+
+                        <div class="">
+                            <p class="text-[80px] font-bold"> Y O U T H F E S T I V A L 2 0 2 6-2027
+                            </p> <br>
+                            <div>
+                                <div>
+
+                                    <p class="text-[48px]">
+                                        Debate (Turncoat / Parliamentary / Standard Debate) </p>
+                                    <p class="text-[32px] mb-25">
+                                        Participation: 1 individual (for Turncoat format) or a 2 to 3 member team (for
+                                        Standard/Oxford-Oregon format).
+                                        Format & Preparation: Motion/topic is provided 15 to 30 minutes prior to the
+                                        round.
+                                        Turncoat Format: The speaker spends the first half of their time speaking FOR
+                                        the
+                                        motion and switches to speaking AGAINST the motion midway upon a signal.
+                                        Time Limit: 3 to 5 minutes per speaker (plus rebuttal time in team formats).
+                                        Language: English or Filipino/Tagalog (as specified by the festival guidelines).
+
+
+                                    <p>
+                                </div>
+                                <div>
+                                    <p class="text-[48px]">
+                                        Evaluation Criteria </p>
+                                    <p class="text-[32px] mb-25">
+                                        Matter / Argumentation (35%): Strength of logic, evidence, counter-arguments,
+                                        and
+                                        refutation of opposing views.
+                                        Manner / Delivery (30%): Persuasiveness, rhetoric, clarity, voice control, and
+                                        poise
+                                        under pressure.
+                                        Structure & Method (20%): Organization of arguments, adherence to time limits,
+                                        and
+                                        effective transitions.
+                                        Rebuttal / Flexibility (15%): Quality of on-the-spot responses and adaptability
+                                        (crucial for Turncoat style).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" p-10 w-full flex justify-center gap-10">
+                    <div class="flex text-lg font-semibold gap-10 ">
+
+                        <div class="">
+                            <p class="text-[80px] font-bold"> Y O U T H F E S T I V A L 2 0 2 6-2027
+                            </p> <br>
+                            <div>
+                                <div>
+
+                                    <p class="text-[48px]">
+                                        Creative Writing (On-the-Spot Essay / Poetry / Short Story) </p>
+                                    <p class="text-[32px] mb-25">
+                                        Participation: 1 participant per category per institution.
+                                        Format: Conducted strictly On the Spot. The prompt, theme, or starting line is
+                                        revealed at the start of the event.
+                                        Time Limit: 1 hour to 1 hour and 30 minutes.
+                                        Word Count Limits:
+                                        Essay Writing: 500 – 800 words.
+                                        Short Story: 800 – 1,200 words.
+                                        Poetry: Minimum 16 lines / 4 stanzas (unless free verse is specified).
+                                        Submission: Written legibly on official provided writing sheets or submitted via
+                                        a
+                                        monitored, offline digital platform (if specified).
+                                    <p>
+                                </div>
+                                <div>
+                                    <p class="text-[48px]">
+                                        Evaluation Criteria </p>
+                                    <p class="text-[32px] mb-25">
+                                        Adherence to Theme & Originality (35%): Creative interpretation of the prompt
+                                        and
+                                        unique perspective.
+                                        Structure & Flow (25%): Organization, narrative arc (for stories), or logical
+                                        development of thoughts (for essays).
+                                        Command of Language (25%): Vocabulary, stylistic flair, imagery (for poetry),
+                                        syntax, and grammar.
+                                        Overall Literary Value & Impact (15%): Emotional resonance, depth of insight,
+                                        and
+                                        overall polish.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- FOOTER desktop-->
+
+
+    <div class=" bg-[#691FD7]/40 w-full border-t-3 border-b-3">
+        <div class="flex gap-10 p-5 ">
+            <div class="flex flex-col ">
+                <div>
+
+                    <p class="text-[15px] ml-2 font-bold">
+                        YOUTH FESTIVAL <br>
+                        <br>
+
+                        YF 2026–2027 <br>
+                        <br>
+                        Celebrating artistic talent, cultural <br> heritage, and youth innovation across Fine <br> Arts,
+                        Performing
+                        Arts, and Literary Arts.
+                    </p>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <p class="text-[12px]"> 2025–2026 Youth Festival Executive Committee. All rights reserved.
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col px-5 italic">
+                <p class="text-[15px] ml-2 font-bold">
+                    COMPETITION CATEGORIES <br>
+                    <br>
+
+                    YF 2026–2027 <br>
+                    <br>
+                    • Fine Arts (Poster, Painting, Clay) <br>
+                    • Performing Arts (Music & Dance) <br>
+                    • Literary Arts (Elocution, Debate) <br>
+                </p>
+
+            </div>
+            <div class="flex flex-col px-5 italic ">
+                <p class="text-[15px] ml-2 font-bold">
+                    EVENT GUIDELINES <br>
+                    <br>
+
+                    YF 2026–2027 <br>
+                    <br>
+                    • General Rules & Regulations <br>
+                    • Event Schedule & Deadlines <br>
+                    • Evaluation Criteria <br>
+                    • Participant Registration Link <br>
+                    • Download Official Rulebook (PDF) <br>
+
+
+                </p>
+            </div>
+            <div class="flex flex-col px-5 italic ">
+                <p class="text-[15px] ml-2 font-bold">
+                    ORGANIZER & CONTACT <br>
+                    <br>
+
+                    YF 2026–2027 <br>
+                    <br>
+                    University of Mindanao Tagum College <br>
+                    Tagum, Davao Region, Philippines <br>
+                    Email: cultural@umtagum.edu.ph <br>
+                    Office: Office of Student Affairs
+                </p>
+                <br>
+                <br>
+                <div>
+                    <p class="text-[12px]">Privacy Policy | Terms of Service | Event Code of Conduct
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+
+                    carts: [],
+                    cartSec: false,
+                    ProductParent: false,
+                    HeroSec: true,
+                    total: 0,
+                    about: false,
+                    proProductParent: false
+
+
+                }
+            },
+            methods: {
+                contactbtn() {
+                    this.proProductParent = true;
+                    this.about = false;
+                    this.ProductParent = false;
+                    this.HeroSec = false;
+                    this.cartSec = false;
+                },
+
+                aboutbtn() {
+                    this.about = true;
+                    this.ProductParent = false;
+                    this.HeroSec = false;
+                    this.cartSec = false;
+                    this.proProductParent = false;
+
+                },
+                itemProduct() {
+                    this.ProductParent = true;
+                    this.HeroSec = false;
+                    this.cartSec = false;
+                    this.about = false;
+                    this.proProductParent = false;
+
+
+                },
+
+                homeSec() {
+                    this.ProductParent = false;
+                    this.HeroSec = true;
+                    this.cartSec = false;
+                    this.about = false;
+                    this.proProductParent = false;
+                },
+
+            }
+
+        }).mount('#app');
+
+    </script>
+
+</body>
+
+</html>
